@@ -1,0 +1,85 @@
+.button
+	background-color buttonColor
+	width auto
+	height auto
+	padding buttonTopPadding buttonRightPadding buttonBottomPadding buttonLeftPadding
+	border-style solid
+	border-width 1px
+	box-shadow unquote(lookup("elevationHelper-" + buttonElevation))
+	border-color buttonBorderColorFunction(buttonColor)
+	margin buttonTopMargin buttonRightMargin buttonBottomMargin buttonLeftMargin
+	
+	&:hover
+		background-color buttonHoverColorFunction(buttonColor)
+		border-color buttonHoverColorFunction(buttonBorderColorFunction(buttonColor))
+		box-shadow unquote(lookup("elevationHelper-" + buttonHoverElevation))
+		
+	&:active
+		background-color buttonPressedColorFunction(buttonColor)
+		border-color buttonPressedColorFunction(buttonBorderColorFunction(buttonColor))
+		box-shadow unquote(lookup("elevationHelper-" + buttonPressedElevation))
+	
+	for color in colors
+		&.{color[0]}
+			background-color color[1]
+			border-color buttonBorderColorFunction(color[1])
+			if dark(color[1])
+				color rgba(255, 255, 255, 1)
+			else
+				color rgba(0, 0, 0, 0.87)
+				
+			&:hover
+				background-color buttonHoverColorFunction(color[1])
+				border-color buttonHoverColorFunction(buttonBorderColorFunction(color[1]))		
+				
+			&:active
+				background-color buttonPressedColorFunction(color[1])
+				border-color buttonPressedColorFunction(buttonBorderColorFunction(color[1]))	
+
+.simple.button
+	background-color rgba(0, 0, 0, 0)
+	border-color black
+	border-width 2px
+	border-style solid
+	box-shadow none
+	font-weight 700	
+	
+	&:hover
+		background-color rgba(0, 0, 0, 0)
+		border-color buttonHoverColorFunction(black)
+		color buttonHoverColorFunction(black)
+		border-width 2px
+		box-shadow none
+		
+	&:active
+		background-color rgba(0, 0, 0, 0)
+		border-color buttonPressedColorFunction(black)
+		color buttonPressedColorFunction(black)
+		box-shadow none
+	
+	for color in colors
+		&.{color[0]}
+			background-color rgba(0, 0, 0, 0)
+			border-color color[1]
+			color color[1]
+			border-width 2px
+			border-style solid
+			
+			&:hover
+				background-color rgba(0, 0, 0, 0)
+				border-color buttonHoverColorFunction(color[1])
+				color buttonHoverColorFunction(color[1])
+				border-width 2px
+				box-shadow none
+				
+			&:active
+				background-color rgba(0, 0, 0, 0)
+				border-color buttonPressedColorFunction(color[1])
+				color buttonPressedColorFunction(color[1])
+				box-shadow none		
+	
+.button.rounded
+	border-top-left-radius buttonRoundedTopLeftRadius
+	border-top-right-radius buttonRoundedTopRightRadius
+	border-bottom-left-radius buttonRoundedBottomLeftRadius
+	border-bottom-right-radius buttonRoundedBottomRightRadius

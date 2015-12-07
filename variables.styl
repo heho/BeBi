@@ -1,0 +1,126 @@
+// Variables
+
+NumsWritten = "zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten" "eleven" "twelve" "thirteen" "fourteen" "fifteen" "sixteen" "seventeen" "eighteen" "nineteen" "twenty" "twenty-one" "twenty-two" "twenty-three" "twenty-four" "twenty-five" "twenty-six" "twenty-seven" "twenty-eight" "twenty-nine" "thirty" "thirty-one" "thirty-two" "thirty-three" "thirty-four" "thirty-five" "thirty-six" "thirty-seven" "thirty-eight" "thirty-nine" "forty" "forty-one" "forty-two" "forty-three" "forty-four" "forty-five" "forty-six" "forty-seven" "forty-eight" "forty-nine" "fifty" "fifty-one" "fifty-two" "fifty-three" "fifty-four" "fifty-five" "fifty-six" "fifty-seven" "fifty-eight" "fifty-nine" "sixty" "sixty-one" "sixty-two" "sixty-three" "sixty-four" "sixty-five" "sixty-six" "sixty-seven" "sixty-eight" "sixty-nine" "seventy" "seventy-one" "seventy-two" "seventy-three" "seventy-four" "seventy-five" "seventy-six" "seventy-seven" "seventy-eight" "seventy-nine" "eighty" "eighty-one" "eighty-two" "eighty-three" "eighty-four" "eighty-five" "eighty-six" "eighty-seven" "eighty-eight" "eighty-nine" "ninety" "ninety-one" "ninety-two" "ninety-three" "ninety-four" "ninety-five" "ninety-six" "ninety-seven" "ninety-eight" "ninety-nine" "hundred"
+prioritiesWritten = "primary" "secondary" "tertiary" "quaternary" "quinary" "senary" "septenary" "octonary" "nonary" "denary"
+sizeName = "micro" "mini" "tiny" "small" "medium" "large" "big" "huge" "massive"
+sizeStartingKey = "medium"
+sizeStartingValue = 100%
+sizeFunction($s) { return $s }
+sizeModificators = ("micro" 40%) ("mini" 55%) ("tiny" 70%) ("small" 85%) ("medium" 100%) ("large" 115%) ("big" 130%) ("huge" 145%) ("massive" 160%)
+
+
+//to be deprevated
+smallSizeModificators = ("micro" 40%) ("mini" 55%) ("tiny" 70%) ("small" 85%)
+largeSizeModificators = ("large" 115%) ("big" 130%) ("huge" 145%) ("massive" 160%)
+
+colorRed = rgb(244,67,54)
+colorBlue = rgb(63,81,181)
+colorGreen = rgb(67,160,71)
+colorPurple = rgb(156,39,176)
+colorYellow = rgb(0, 0, 0)
+colorOrange = rgb(255,193,7)
+colorLime = rgb(192,249,49)
+colorBrown = rgb(109,76,65)
+colorBlack = rgb(0,0,0)
+colorWhite = rgb(255,255,255)
+colorGray = rgb(158,158,158)
+colorSteel = rgb(144,164,174)
+colors = ("red" colorRed) ("blue" colorBlue) ("green" colorGreen) ("purple" colorPurple) ("yellow" colorYellow) ("orange" colorOrange) ("lime" colorLime)  ("brown" colorBrown) ("black" colorBlack) ("white" colorWhite) ("gray" colorGray) ("steel" colorSteel)
+
+userColors = rgb(102, 117, 168) rgb(65, 196, 84) rgb(188, 214, 122) rgb(210, 70, 100) rgb(125, 93, 171)
+
+columnNum = 16
+levelsOfElevation = 5
+
+borderRadius = 10px
+
+gutterSize = 20px
+horizontalSpace = 18px
+verticalSpace = 21px
+
+//specific
+
+gridGutterSize = gutterSize
+gridTopMargin = 0px
+gridRightMargin = horizontalSpace
+gridBottomMargin = 0px
+gridLeftMargin = horizontalSpace
+
+containerTopMargin = verticalSpace
+containerRightMargin = horizontalSpace
+containerBottomMargin = verticalSpace
+containerLeftMargin = horizontalSpace
+
+moduleTopMargin = 0px
+moduleRightMargin = 0px
+moduleBottomMargin = 0px
+moduleLeftMargin = 0px
+moduleTopPadding = verticalSpace
+moduleRightPadding = horizontalSpace
+moduleBottomPadding = verticalSpace
+moduleLeftPadding = horizontalSpace
+
+dividerTopMargin = verticalSpace
+dividerRightMargin = horizontalSpace
+dividerLeftMargin = verticalSpace
+dividerBottomMargin = horizontalSpace
+dividerColors = alpha(black, 0.25) alpha(black, 0.1)
+
+areaTopPadding = verticalSpace
+areaRightPadding = horizontalSpace
+areaBottomPadding = 2+verticalSpace
+areaLeftPadding = horizontalSpace
+
+cardElevation = 2
+cardContentBackgroundColor = colorWhite
+cardContentTopPadding = verticalSpace
+cardContentRightPadding = horizontalSpace
+cardContentBottomPadding = verticalSpace
+cardContentLeftPadding = horizontalSpace
+cardColoredContentFunction($c) { lighten($c, 40%) }
+cardRoundedTopLeftRadius = borderRadius
+cardRoundedTopRightRadius = borderRadius
+cardRoundedBottomLeftRadius = borderRadius
+cardRoundedBottomRightRadius = borderRadius
+cardDividerColorFunction($c) { alpha($c, 20%) }
+
+segmentElevation = 1
+segmentBackgroundColor = colorWhite
+segmentBorderColor = rgba(190, 190, 190, 1)
+segmentTopMargin = verticalSpace
+segmentRightMargin = horizontalSpace
+segmentBottomMargin = verticalSpace
+segmentLeftMargin =horizontalSpace 
+segmentTopPadding = -3 + verticalSpace
+segmentRightPadding = horizontalSpace
+segmentBottomPadding = -2 + verticalSpace
+segmentLeftPadding = horizontalSpace
+segmentRoundedTopLeft = borderRadius
+segmentRoundedTopRight = borderRadius
+segmentRoundedBottomLeft = borderRadius
+segmentRoundedBottomRight = borderRadius
+
+buttonColor = colorWhite
+buttonBorderColorFunction($c) { darken($c, 30%) }
+buttonElevation = 1
+buttonHoverColorFunction($c) { darken($c, 20%) }
+buttonHoverElevation = 2
+buttonPressedColorFunction($c) { darken($c, 30%)}
+buttonPressedElevation = 0
+buttonTopPadding = 9px
+buttonRightPadding = horizontalSpace
+buttonBottomPadding = 8px
+buttonLeftPadding = horizontalSpace
+buttonTopMargin = verticalSpace
+buttonRightMargin = horizontalSpace
+buttonBottomMargin = verticalSpace
+buttonLeftMargin = horizontalSpace
+buttonRoundedTopLeft = borderRadius
+buttonRoundedTopRight = borderRadius
+buttonRoundedBottomLeft = borderRadius
+buttonRoundedBottomRight = borderRadius
+
+Top = 0
+Right = 0
+Bottom = 0
+Left = 0

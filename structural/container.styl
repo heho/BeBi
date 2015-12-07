@@ -1,0 +1,50 @@
+.fluid.container
+	width 100%
+	margin 0 0 0 0
+	left 0
+
+.container
+	position relative
+	overflow hidden
+	margin containerTopMargin containerRightMargin containerBottomMargin containerLeftMargin
+
+	@media (min-width: 768px)
+		&
+			width 768px - (containerLeftMargin + containerRightMargin)
+			margin-left 0 - 0.5 * (768px - (containerLeftMargin + containerRightMargin))
+			left 50%
+
+		for size in smallSizeModificators
+			&.{size[0]}
+				width 0.011 * 768px * size[1] - (containerLeftMargin + containerRightMargin)
+				margin-left 0 - 0.5 * (0.011 * 768px * size[1] - (containerLeftMargin + containerRightMargin))
+
+	@media (min-width: 992px)
+		&
+			width 992px - (containerLeftMargin + containerRightMargin)
+			margin-left 0 - 0.5 * (992px - (containerLeftMargin + containerRightMargin))
+			left 50%
+
+		for size in smallSizeModificators
+			&.{size[0]}
+				width 0.011 * 992px * size[1] - (containerLeftMargin + containerRightMargin)
+				margin-left 0 - 0.5 * (0.011 * 992px * size[1] - (containerLeftMargin + containerRightMargin))
+
+	@media (min-width: 1200px)
+		&
+			width 1200px - (containerLeftMargin + containerRightMargin)
+			margin-left 0 - 0.5 * (1200px - (containerLeftMargin + containerRightMargin))
+			left 50%
+
+		for size in smallSizeModificators
+			&.{size[0]}
+				width 0.011 * 1200px * size[1] - (containerLeftMargin + containerRightMargin)
+				margin-left 0 - 0.5 * (0.011 * 1200px * size[1] - (containerLeftMargin + containerRightMargin))
+
+p
+	margin 0.8*verticalSpace 0 0 0  
+	padding 0 0 4px 0
+
+.module
+	margin moduleTopMargin moduleRightMargin moduleBottomMargin moduleLeftMargin
+	padding moduleTopPadding moduleRightPadding moduleBottomPadding moduleLeftPadding

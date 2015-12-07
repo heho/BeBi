@@ -1,0 +1,44 @@
+.card
+	border-style solid
+	border-width 1px
+	border-color black
+	//overflow hidden
+	width 300px
+	position relative
+	box-shadow unquote(lookup("elevationHelper-" + cardElevation))
+	
+	for color in colors
+		&.{color[0]}
+			border-color color[1]
+			
+		&.{color[0]}>.header
+			color color[1]
+
+		&.{color[0]}>.content
+			border-top 1px solid cardDividerColorFunction(color[1])
+
+		&.colored.{color[0]}>.content
+			background-color cardColoredContentFunction(color[1])
+
+.card>.content
+	background-color cardContentBackgroundColor
+	padding cardContentTopPadding cardContentRightPadding cardContentBottomPadding cardContentLeftPadding
+	border-top 1px solid cardDividerColorFunction(black)
+	
+.card.rounded
+	border-top-left-radius cardRoundedTopLeftRadius
+	border-top-right-radius cardRoundedTopRightRadius
+	border-bottom-left-radius cardRoundedBottomLeftRadius
+	border-bottom-right-radius cardRoundedBottomRightRadius
+
+.card.rounded>:first-child
+	border-top none !important
+	border-top-left-radius -1+cardRoundedTopLeftRadius
+	border-top-right-radius -1+cardRoundedTopRightRadius
+	
+.card.rounded>:last-child
+	border-bottom-left-radius -1+cardRoundedBottomLeftRadius
+	border-bottom-right-radius -1+cardRoundedBottomRightRadius
+
+.fluid.card
+	width 100%

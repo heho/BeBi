@@ -1,0 +1,49 @@
+.column
+	float left
+	padding-right gridGutterSize
+
+.gutterfree.row>.column
+	padding-right 0
+
+.gutterfree.row
+	margin-right gridRightMargin
+
+.column:last-of-type
+	padding-right gridRightMargin
+
+.row.fluid > .column:last-of-type
+	padding-right 0
+
+.responsive>.column:last-of-type
+	padding-right gridGutterSize
+
+.fluid.responsive>.column
+	padding-right 0
+
+	@media (min-width: 768px)
+		&
+			padding-right gridGutterSize
+			
+.row
+	margin-left gridLeftMargin
+	
+	&.fluid
+		margin 0 0 0 0
+	
+	&:after
+		content ""
+		display table
+		clear both
+
+
+for i in range(1, columnNum)
+	for j in range(1, i)
+		.{NumsWritten[i]}.wide.row > .{NumsWritten[j]}.wide.column
+			widthCache: (j / i * 100) + "%"
+
+		.{NumsWritten[i]}.wide.responsive.row > .{NumsWritten[j]}.wide.column
+			widthCache 100%
+			
+			@media (min-width: 768px)
+				&
+					widthCache (j / i * 100) + "%"

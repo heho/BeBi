@@ -1,0 +1,15 @@
+.divider
+	border-top 1px solid dividerColors[0]
+	border-bottom 1px solid dividerColors[1]
+	height 0
+	margin dividerTopMargin dividerRightMargin dividerLeftMargin dividerBottomMargin
+
+	for size in sizeModificators
+		&.{size[0]}
+			margin 0.01*dividerTopMargin*size[1] dividerRightMargin 0.01*dividerLeftMargin*size[1] dividerBottomMargin
+
+	&.fluid
+		margin dividerTopMargin 0 dividerBottomMargin 0
+
+	&.invisible
+		border 2px solid rgba(0,0,0,0)

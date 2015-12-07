@@ -1,0 +1,76 @@
+.segment
+	background-color segmentBackgroundColor
+	border-color segmentBorderColor
+	border-width 1px
+	border-style solid
+	margin segmentTopMargin segmentRightMargin segmentBottomMargin segmentLeftMargin
+	padding segmentTopPadding segmentRightPadding segmentBottomPadding segmentLeftPadding
+	box-shadow unquote(lookup("elevationHelper-" + segmentElevation))
+	position relative
+
+.segment.rounded
+	border-top-left-radius segmentRoundedTopLeft
+	border-top-right-radius segmentRoundedTopRight
+	border-bottom-left-radius segmentRoundedBottomLeft
+	border-bottom-right-radius segmentRoundedBottomRight
+	
+.segment.borderless
+	border-style none
+	border-width 0
+
+.segment.stacked
+	z-index auto
+	box-shadow ''
+
+.segment.stacked::after
+	content ''
+	visibility visible
+	display block
+	width 100%
+	height 100%
+	background-color segmentBackgroundColor
+	top 3px
+	left 3px
+	position absolute
+	z-index -1
+	border-color segmentBorderColor
+	border-width 1px
+	border-style solid
+	box-shadow unquote(lookup("elevationHelper-" + segmentElevation))
+
+
+.segment.stacked.rounded::after
+	border-top-left-radius segmentRoundedTopLeft
+	border-top-right-radius segmentRoundedTopRight
+	border-bottom-left-radius segmentRoundedBottomLeft
+	border-bottom-right-radius segmentRoundedBottomRight
+	
+.segment.attached
+	margin-top -1
+	margin-bottom 0
+	border-bottom-width 0
+
+.segment.top.attached
+	margin-top segmentTopMargin
+	border-bottom-width 0
+
+.segment.bottom.attached
+	margin-bottom segmentBottomMargin
+	border-bottom-width 1px
+
+.segment.rounded.attached
+	border-top-left-radius 0
+	border-top-right-radius 0
+	border-bottom-left-radius 0
+	border-bottom-right-radius 0
+
+.segment.rounded.top.attached
+	border-top-left-radius segmentRoundedTopLeft
+	border-top-right-radius segmentRoundedTopRight
+
+.segment.rounded.bottom.attached
+	border-bottom-left-radius segmentRoundedBottomLeft
+	border-bottom-right-radius segmentRoundedBottomRight
+
+.segment.area
+	width auto

@@ -1,0 +1,21 @@
+.header
+	font-size: 150%
+	font-weight: 700
+
+	for size in sizeModificators
+		&.{size[0]}
+			font-size 1.5 * size[1]
+	    
+	for color in colors
+		&.{color[0]}
+			color color[1]
+
+	&>.icon+.content
+		display table-cell
+		padding-left 0.4em
+		vertical-align middle
+
+	&>.icon
+		display table-cell
+		font-size 1.2em
+		vertical-align middle

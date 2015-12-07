@@ -1,0 +1,22 @@
+.area
+	width 100%
+	padding areaTopPadding areaRightPadding areaBottomPadding areaLeftPadding
+
+	for color in colors
+		&.{color[0]}
+			background-color color[1]
+			if dark(color[1])
+				color rgba(255, 255, 255, 1)
+			else
+				color rgba(0, 0, 0, 0.87)
+
+		.{color[0]}>&
+			background-color color[1]
+			if dark(color[1])
+				color rgba(255, 255, 255, 1)
+			else
+				color rgba(0, 0, 0, 0.87)
+
+	for size in sizeModificators
+		&.{size[0]}
+			padding areaTopPadding*(size[1]*0.01) areaRightPadding*(size[1]*0.01) areaBottomPadding*(size[1]*0.01) areaLeftPadding*(size[1]*0.01)
