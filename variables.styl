@@ -103,9 +103,9 @@ segmentRoundedBottomRight = borderRadius
 buttonColor = colorWhite
 buttonBorderColorFunction($c) { darken($c, 30%) }
 buttonElevation = 1
-buttonHoverColorFunction($c) { darken($c, 20%) }
+buttonHoverColorFunction($c) { if(dark($c)) { lighten($c, 20%) } else { darken($c, 15%) }}
 buttonHoverElevation = 2
-buttonPressedColorFunction($c) { darken($c, 30%)}
+buttonPressedColorFunction($c) { if(dark($c)) { lighten($c, 30%) } else { darken($c, 25%) }}
 buttonPressedElevation = 0
 buttonTopPadding = 9px
 buttonRightPadding = horizontalSpace
@@ -119,6 +119,13 @@ buttonRoundedTopLeft = borderRadius
 buttonRoundedTopRight = borderRadius
 buttonRoundedBottomLeft = borderRadius
 buttonRoundedBottomRight = borderRadius
+
+menuColor = colorWhite
+menuItemTopPadding = 12px
+menuItemRightPadding = 12px
+menuItemBottomPadding = 12px
+menuItemLeftPadding = 12px
+menuItemHoverFunction($c) { if(dark($c)) { lighten($c, 10%) } else { darken($c, 10%) }}
 
 Top = 0
 Right = 0

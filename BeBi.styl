@@ -4,9 +4,6 @@
 
 // Helper
 
-NumsWritten = "zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten" "eleven" "twelve" "thirteen" "fourteen" "fifteen" "sixteen" "seventeen" "eighteen" "nineteen" "twenty" "twenty-one" "twenty-two" "twenty-three" "twenty-four" "twenty-five" "twenty-six" "twenty-seven" "twenty-eight" "twenty-nine" "thirty" "thirty-one" "thirty-two" "thirty-three" "thirty-four" "thirty-five" "thirty-six" "thirty-seven" "thirty-eight" "thirty-nine" "forty" "forty-one" "forty-two" "forty-three" "forty-four" "forty-five" "forty-six" "forty-seven" "forty-eight" "forty-nine" "fifty" "fifty-one" "fifty-two" "fifty-three" "fifty-four" "fifty-five" "fifty-six" "fifty-seven" "fifty-eight" "fifty-nine" "sixty" "sixty-one" "sixty-two" "sixty-three" "sixty-four" "sixty-five" "sixty-six" "sixty-seven" "sixty-eight" "sixty-nine" "seventy" "seventy-one" "seventy-two" "seventy-three" "seventy-four" "seventy-five" "seventy-six" "seventy-seven" "seventy-eight" "seventy-nine" "eighty" "eighty-one" "eighty-two" "eighty-three" "eighty-four" "eighty-five" "eighty-six" "eighty-seven" "eighty-eight" "eighty-nine" "ninety" "ninety-one" "ninety-two" "ninety-three" "ninety-four" "ninety-five" "ninety-six" "ninety-seven" "ninety-eight" "ninety-nine" "hundred"
-prioritiesWritten = "primary" "secondary" "tertiary" "quaternary" "quinary" "senary" "septenary" "octonary" "nonary" "denary"
-
 .highlightHelper
   background-color rgba(0, 0, 0, 0.2)
   border 2px solid rgba(0, 0, 0, 0.4)
@@ -14,35 +11,41 @@ prioritiesWritten = "primary" "secondary" "tertiary" "quaternary" "quinary" "sen
 // Mixins
 
 widthCache($width)
-  +cache('width' + $width)
-    width: $width
+	+cache('width' + $width)
+		width: $width
 
 border-radius(n)
-  -webkit-border-radius n
-  -moz-border-radius n
-  border-radius n
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
 
 transition(n)
-  -webkit-transition n
-  -moz-transition n
-  -ms-transition n
-  -o-transition n
-  transition n
+	-webkit-transition n
+	-moz-transition n
+	-ms-transition n
+	-o-transition n
+	transition n
+  
+user-select(n)
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
 
 // worker functions
 
 for i in range(0, -1+length(userColors))
-  pair = ()
-  push(pair, prioritiesWritten[i] + "Color", userColors[i])
-  define(pair[0], pair[1])
-  push(colors, pair)
+	pair = ()
+	push(pair, prioritiesWritten[i] + "Color", userColors[i])
+	define(pair[0], pair[1])
+	push(colors, pair)
   
 for i in range(0, levelsOfElevation)
-  boxShadowHelper = "" + (0.5*i*1px) + " " + (1.5*i*1px) + " " + (2.5*i*1px) + " " +  (0*i*1px) + " " + (rgba(100, 100, 100, (0.32-(i*0.04))))
-  .{NumsWritten[i]}.elevated
-    box-shadow unquote(boxShadowHelper) !important
+	boxShadowHelper = "" + (0.5*i*1px) + " " + (1.5*i*1px) + " " + (2.5*i*1px) + " " +  (0*i*1px) + " " + (rgba(100, 100, 100, (0.32-(i*0.04))))
+	.{NumsWritten[i]}.elevated
+		box-shadow unquote(boxShadowHelper) !important
     
-  define("elevationHelper-" + i, boxShadowHelper)
+	define("elevationHelper-" + i, boxShadowHelper)
 
 /*** Main rules ***/
 
@@ -50,18 +53,18 @@ for i in range(0, levelsOfElevation)
 /* everything */
   
 *, *:after, *:before
-  -webkit-box-sizing border-box
-  -moz-box-sizing border-box
-  box-sizing border-box
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
   
 body
-  font-family ptSans
+	font-family ptSans
   
 .rounded
-  border-radius(borderRadius)
+	border-radius(borderRadius)
   
 div, button, a, span, p
-  transition(all 300ms ease)
+	transition(all 300ms ease)
 
 @import "structural\structural"
 @import "icons\icons"

@@ -1,0 +1,92 @@
+.menu
+	position relative
+	width auto
+	height auto
+	display inline-block
+	
+	&>.item
+		background-color menuColor
+		border-width 1px
+		border-color rgba(220, 220, 220, 0.8);
+		border-style solid
+		padding menuItemTopPadding menuItemRightPadding menuItemBottomPadding menuItemLeftPadding
+		user-select none
+		cursor pointer
+		
+		&:not(:last-of-type) {
+			border-bottom-width 0px
+		}
+		
+		&:hover
+			background-color menuItemHoverFunction(menuColor)
+		
+	for color in colors
+		&.{color[0]}>.item
+			background-color menuColor
+							
+				&:hover
+					background-color menuItemHoverFunction(color[1])
+		
+	&.area
+		padding 0
+		width 100%
+		display table
+
+		&>.item
+			margin 0
+			border-width 0	
+			display inline-block
+			
+		for color in colors
+			&.{color[0]}>.item
+				background-color color[1]
+				
+				&:hover
+					background-color menuItemHoverFunction(color[1])
+					
+		&.responsive
+			display block
+
+			&::before
+				content "menu"
+				padding menuItemTopPadding menuItemRightPadding menuItemBottomPadding menuItemLeftPadding
+				font-family materialIcons
+				font-weight normal
+				font-style normal
+				font-size 24px  /* Preferred icon size */
+				display inline-block
+				width 24px
+				height 46px
+				line-height 1
+				text-transform none
+				letter-spacing normal
+				word-wrap normal
+				white-space nowrap
+				direction ltr
+				-webkit-font-smoothing antialiased
+				text-rendering optimizeLegibility
+				-moz-osx-font-smoothing grayscale
+				font-feature-settings 'liga'
+				user-select none
+
+			&>.item
+				display block
+				
+			&:not(.active)>.item
+				height 0px
+				padding 0px
+				overflow hidden
+				
+			@media (min-width: 992px	)
+				&
+					display table
+					
+					&:not(.active)>.item
+						height auto
+						padding menuItemTopPadding menuItemRightPadding menuItemBottomPadding menuItemLeftPadding
+					
+					&>.item
+						display: inline-block
+						
+					&::before
+						display none
