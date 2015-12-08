@@ -2464,9 +2464,6 @@ i.icon {
 }
 .menu>.item {
   background-color: #fff;
-  border-width: 1px;
-  border-color: rgba(220,220,220,0.8);
-  border-style: solid;
   padding: 12px 12px 12px 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2478,58 +2475,177 @@ i.icon {
   border-bottom-width: 0px;
 }
 .menu>.item:hover {
-  background-color: #e6e6e6;
+  background-color: #d9d9d9;
 }
-.menu.red>.item background-color menuColor:hover {
-  background-color: #f2291a;
+.menu.red {
+  background-color: #f44336;
 }
-.menu.blue>.item background-color menuColor:hover {
+.menu.red>.item {
+  background-color: #f44336;
+}
+.menu.red>.item:hover,
+.menu.red>.item.active {
+  background-color: #f01d0d;
+}
+.menu.blue {
+  background-color: #3f51b5;
+}
+.menu.blue>.item {
+  background-color: #3f51b5;
+}
+.menu.blue>.item:hover,
+.menu.blue>.item.active {
   background-color: #4d5fc1;
 }
-.menu.green>.item background-color menuColor:hover {
+.menu.green {
+  background-color: #43a047;
+}
+.menu.green>.item {
+  background-color: #43a047;
+}
+.menu.green>.item:hover,
+.menu.green>.item.active {
   background-color: #4bb450;
 }
-.menu.purple>.item background-color menuColor:hover {
+.menu.purple {
+  background-color: #9c27b0;
+}
+.menu.purple>.item {
+  background-color: #9c27b0;
+}
+.menu.purple>.item:hover,
+.menu.purple>.item.active {
   background-color: #b12cc8;
 }
-.menu.yellow>.item background-color menuColor:hover {
-  background-color: #ffe81c;
+.menu.yellow {
+  background-color: #ffeb3b;
 }
-.menu.orange>.item background-color menuColor:hover {
-  background-color: #ecb100;
+.menu.yellow>.item {
+  background-color: #ffeb3b;
 }
-.menu.lime>.item background-color menuColor:hover {
-  background-color: #b7f814;
+.menu.yellow>.item:hover,
+.menu.yellow>.item.active {
+  background-color: #ffe60c;
 }
-.menu.brown>.item background-color menuColor:hover {
+.menu.orange {
+  background-color: #ffc107;
+}
+.menu.orange>.item {
+  background-color: #ffc107;
+}
+.menu.orange>.item:hover,
+.menu.orange>.item.active {
+  background-color: #dfa700;
+}
+.menu.lime {
+  background-color: #c0f931;
+}
+.menu.lime>.item {
+  background-color: #c0f931;
+}
+.menu.lime>.item:hover,
+.menu.lime>.item.active {
+  background-color: #b2f607;
+}
+.menu.brown {
+  background-color: #6d4c41;
+}
+.menu.brown>.item {
+  background-color: #6d4c41;
+}
+.menu.brown>.item:hover,
+.menu.brown>.item.active {
   background-color: #825b4e;
 }
-.menu.black>.item background-color menuColor:hover {
+.menu.black {
+  background-color: #000;
+}
+.menu.black>.item {
+  background-color: #000;
+}
+.menu.black>.item:hover,
+.menu.black>.item.active {
   background-color: #1a1a1a;
 }
-.menu.white>.item background-color menuColor:hover {
-  background-color: #e6e6e6;
+.menu.white {
+  background-color: #fff;
 }
-.menu.gray>.item background-color menuColor:hover {
-  background-color: #8e8e8e;
+.menu.white>.item {
+  background-color: #fff;
 }
-.menu.steel>.item background-color menuColor:hover {
-  background-color: #7e95a1;
+.menu.white>.item:hover,
+.menu.white>.item.active {
+  background-color: #d9d9d9;
 }
-.menu.primaryColor>.item background-color menuColor:hover {
-  background-color: #58679b;
+.menu.gray {
+  background-color: #9e9e9e;
 }
-.menu.secondaryColor>.item background-color menuColor:hover {
-  background-color: #38b34a;
+.menu.gray>.item {
+  background-color: #9e9e9e;
 }
-.menu.tertiaryColor>.item background-color menuColor:hover {
-  background-color: #afce60;
+.menu.gray>.item:hover,
+.menu.gray>.item.active {
+  background-color: #868686;
 }
-.menu.quaternaryColor>.item background-color menuColor:hover {
-  background-color: #cb3152;
+.menu.steel {
+  background-color: #90a4ae;
 }
-.menu.quinaryColor>.item background-color menuColor:hover {
-  background-color: #70519c;
+.menu.steel>.item {
+  background-color: #90a4ae;
+}
+.menu.steel>.item:hover,
+.menu.steel>.item.active {
+  background-color: #748d9a;
+}
+.menu.primaryColor {
+  background-color: #6675a8;
+}
+.menu.primaryColor>.item {
+  background-color: #6675a8;
+}
+.menu.primaryColor>.item:hover,
+.menu.primaryColor>.item.active {
+  background-color: #536292;
+}
+.menu.secondaryColor {
+  background-color: #41c454;
+}
+.menu.secondaryColor>.item {
+  background-color: #41c454;
+}
+.menu.secondaryColor>.item:hover,
+.menu.secondaryColor>.item.active {
+  background-color: #35a945;
+}
+.menu.tertiaryColor {
+  background-color: #bcd67a;
+}
+.menu.tertiaryColor>.item {
+  background-color: #bcd67a;
+}
+.menu.tertiaryColor>.item:hover,
+.menu.tertiaryColor>.item.active {
+  background-color: #a9ca53;
+}
+.menu.quaternaryColor {
+  background-color: #d24664;
+}
+.menu.quaternaryColor>.item {
+  background-color: #d24664;
+}
+.menu.quaternaryColor>.item:hover,
+.menu.quaternaryColor>.item.active {
+  background-color: #bf2f4e;
+}
+.menu.quinaryColor {
+  background-color: #7d5dab;
+}
+.menu.quinaryColor>.item {
+  background-color: #7d5dab;
+}
+.menu.quinaryColor>.item:hover,
+.menu.quinaryColor>.item.active {
+  background-color: #6a4d94;
 }
 .menu.area {
   padding: 0;
@@ -2538,110 +2654,7 @@ i.icon {
 }
 .menu.area>.item {
   margin: 0;
-  border-width: 0;
   display: inline-block;
-}
-.menu.area.red>.item {
-  background-color: #f44336;
-}
-.menu.area.red>.item:hover {
-  background-color: #f2291a;
-}
-.menu.area.blue>.item {
-  background-color: #3f51b5;
-}
-.menu.area.blue>.item:hover {
-  background-color: #4d5fc1;
-}
-.menu.area.green>.item {
-  background-color: #43a047;
-}
-.menu.area.green>.item:hover {
-  background-color: #4bb450;
-}
-.menu.area.purple>.item {
-  background-color: #9c27b0;
-}
-.menu.area.purple>.item:hover {
-  background-color: #b12cc8;
-}
-.menu.area.yellow>.item {
-  background-color: #ffeb3b;
-}
-.menu.area.yellow>.item:hover {
-  background-color: #ffe81c;
-}
-.menu.area.orange>.item {
-  background-color: #ffc107;
-}
-.menu.area.orange>.item:hover {
-  background-color: #ecb100;
-}
-.menu.area.lime>.item {
-  background-color: #c0f931;
-}
-.menu.area.lime>.item:hover {
-  background-color: #b7f814;
-}
-.menu.area.brown>.item {
-  background-color: #6d4c41;
-}
-.menu.area.brown>.item:hover {
-  background-color: #825b4e;
-}
-.menu.area.black>.item {
-  background-color: #000;
-}
-.menu.area.black>.item:hover {
-  background-color: #1a1a1a;
-}
-.menu.area.white>.item {
-  background-color: #fff;
-}
-.menu.area.white>.item:hover {
-  background-color: #e6e6e6;
-}
-.menu.area.gray>.item {
-  background-color: #9e9e9e;
-}
-.menu.area.gray>.item:hover {
-  background-color: #8e8e8e;
-}
-.menu.area.steel>.item {
-  background-color: #90a4ae;
-}
-.menu.area.steel>.item:hover {
-  background-color: #7e95a1;
-}
-.menu.area.primaryColor>.item {
-  background-color: #6675a8;
-}
-.menu.area.primaryColor>.item:hover {
-  background-color: #58679b;
-}
-.menu.area.secondaryColor>.item {
-  background-color: #41c454;
-}
-.menu.area.secondaryColor>.item:hover {
-  background-color: #38b34a;
-}
-.menu.area.tertiaryColor>.item {
-  background-color: #bcd67a;
-}
-.menu.area.tertiaryColor>.item:hover {
-  background-color: #afce60;
-}
-.menu.area.quaternaryColor>.item {
-  background-color: #d24664;
-}
-.menu.area.quaternaryColor>.item:hover {
-  background-color: #cb3152;
-}
-.menu.area.quinaryColor>.item {
-  background-color: #7d5dab;
-}
-.menu.area.quinaryColor>.item:hover {
-  background-color: #70519c;
 }
 .menu.area.responsive {
   display: block;

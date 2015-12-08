@@ -6,9 +6,6 @@
 	
 	&>.item
 		background-color menuColor
-		border-width 1px
-		border-color rgba(220, 220, 220, 0.8);
-		border-style solid
 		padding menuItemTopPadding menuItemRightPadding menuItemBottomPadding menuItemLeftPadding
 		user-select none
 		cursor pointer
@@ -21,12 +18,15 @@
 			background-color menuItemHoverFunction(menuColor)
 		
 	for color in colors
+		&.{color[0]}
+			background-color color[1]
+
 		&.{color[0]}>.item
-			background-color menuColor
+			background-color color[1]
 							
-				&:hover
-					background-color menuItemHoverFunction(color[1])
-		
+			&:hover, &.active
+				background-color menuItemHoverFunction(color[1])
+
 	&.area
 		padding 0
 		width 100%
@@ -34,15 +34,7 @@
 
 		&>.item
 			margin 0
-			border-width 0	
 			display inline-block
-			
-		for color in colors
-			&.{color[0]}>.item
-				background-color color[1]
-				
-				&:hover
-					background-color menuItemHoverFunction(color[1])
 					
 		&.responsive
 			display block
