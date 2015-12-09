@@ -5,5 +5,5 @@ addEventListenerToAll = (selector, eventName, eventListener) ->
 
 
 document.addEventListener 'DOMContentLoaded', ->
-	addEventListenerToAll '.menu.responsive', 'click', (e) ->
-		e.target.classList.toggle 'active'
+	addEventListenerToAll '.menu.responsive>.toggle', 'click', (e) ->
+		e.currentTarget.parentNode.classList.toggle 'active'

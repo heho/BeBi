@@ -11,12 +11,16 @@
 	
 	&:hover
 		background-color buttonHoverColorFunction(buttonColor)
-		border-color buttonHoverColorFunction(buttonBorderColorFunction(buttonColor))
+		border-color buttonBorderColorFunction(buttonHoverColorFunction(buttonColor))
 		box-shadow unquote(lookup("elevationHelper-" + buttonHoverElevation))
+		
+	&:focus
+		border-color buttonBorderColorFunction(buttonPressedColorFunction(buttonColor))
+		outline none
 		
 	&:active
 		background-color buttonPressedColorFunction(buttonColor)
-		border-color buttonPressedColorFunction(buttonBorderColorFunction(buttonColor))
+		border-color buttonBorderColorFunction(buttonPressedColorFunction(buttonColor))
 		box-shadow unquote(lookup("elevationHelper-" + buttonPressedElevation))
 	
 	for color in colors
@@ -30,11 +34,15 @@
 				
 			&:hover
 				background-color buttonHoverColorFunction(color[1])
-				border-color buttonHoverColorFunction(buttonBorderColorFunction(color[1]))		
+				border-color buttonBorderColorFunction(buttonHoverColorFunction(color[1]))		
 				
 			&:active
 				background-color buttonPressedColorFunction(color[1])
-				border-color buttonPressedColorFunction(buttonBorderColorFunction(color[1]))	
+				border-color buttonBorderColorFunction(buttonPressedColorFunction(color[1]))
+				
+			&:focus
+				border-color buttonBorderColorFunction(buttonPressedColorFunction(color[1]))
+				outline none	
 
 .simple.button
 	background-color rgba(0, 0, 0, 0)

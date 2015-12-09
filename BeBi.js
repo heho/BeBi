@@ -14,8 +14,8 @@
   };
 
   document.addEventListener('DOMContentLoaded', function() {
-    return addEventListenerToAll('.menu.responsive', 'click', function(e) {
-      return e.target.classList.toggle('active');
+    return addEventListenerToAll('.menu.responsive>.toggle', 'click', function(e) {
+      return e.currentTarget.parentNode.classList.toggle('active');
     });
   });
 

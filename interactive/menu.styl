@@ -3,22 +3,23 @@
 	width auto
 	height auto
 	display inline-block
+	position relative
 	
 	&>.item
 		background-color menuColor
 		padding menuItemTopPadding menuItemRightPadding menuItemBottomPadding menuItemLeftPadding
 		user-select none
 		cursor pointer
-		
-		&:not(:last-of-type) {
-			border-bottom-width 0px
-		}
+		height menuAreaHeight
 		
 		&:hover
 			background-color menuItemHoverFunction(menuColor)
 		
 	for color in colors
 		&.{color[0]}
+			background-color color[1]
+			
+		&.{color[0]}.area>.header
 			background-color color[1]
 
 		&.{color[0]}>.item
@@ -31,6 +32,15 @@
 		padding 0
 		width 100%
 		display table
+		max-height menuAreaHeight
+
+		&>.header
+			position relative
+			background-color menuColor
+			display inline-block
+			height menuAreaHeight
+			padding -4+menuItemTopPadding menuItemRightPadding 0 menuItemLeftPadding
+			vertical-align middle
 
 		&>.item
 			margin 0
@@ -39,39 +49,37 @@
 		&.responsive
 			display block
 
-			&::before
-				content "menu"
-				padding menuItemTopPadding menuItemRightPadding menuItemBottomPadding menuItemLeftPadding
-				font-family materialIcons
-				font-weight normal
-				font-style normal
-				font-size 24px  /* Preferred icon size */
-				display inline-block
-				width 24px
-				height 46px
-				line-height 1
-				text-transform none
-				letter-spacing normal
-				word-wrap normal
-				white-space nowrap
-				direction ltr
-				-webkit-font-smoothing antialiased
-				text-rendering optimizeLegibility
-				-moz-osx-font-smoothing grayscale
-				font-feature-settings 'liga'
-				user-select none
-
 			&>.item
 				display block
 				
-			&:not(.active)>.item
-				height 0px
-				padding 0px
-				overflow hidden
+			&>.toggle
+				display inline-block
+				vertical-align middle
 				
-			@media (min-width: 992px	)
+				&.right
+					padding -4+menuItemTopPadding menuItemRightPadding 0 menuItemLeftPadding
+					position absolute 
+					right 20px
+				
+			&.active
+				max-height 300px
+				
+				&>.toggle
+					opacity 1
+				
+			&:not(.active)
+				max-height menuAreaHeight
+					
+				&>.toggle
+					opacity 0
+					
+					&.visible
+						opacity 1	
+				
+			@media (min-width: 992px)
 				&
 					display table
+					height menuAreaHeight
 					
 					&:not(.active)>.item
 						height auto
@@ -82,3 +90,9 @@
 						
 					&::before
 						display none
+						
+					&.active>.toggle
+						opacity 0	
+						
+						&.visible
+							opacity 1
