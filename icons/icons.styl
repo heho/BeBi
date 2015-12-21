@@ -16,3 +16,20 @@ i.icon
 	text-rendering optimizeLegibility
 	-moz-osx-font-smoothing grayscale
 	font-feature-settings 'liga'
+
+	for color in colors
+		&.{color[0]}
+			color color[1]
+			
+	for size in sizeModificators
+		&.{size[0]}
+			font-size 0.02*24px*size[1] - 0.01*24
+			
+	&.flipped
+		transform(scale(1,-1))
+		
+	&.clockwise.rotated
+		transform(rotate(90deg))
+		
+	&.counterclockwise.rotated
+		transform(rotate(-90deg))

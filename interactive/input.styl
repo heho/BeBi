@@ -1,4 +1,4 @@
-input[type=text]
+input[type="text"].input, input[type="password"].input, input[type="email"].input, textarea.input
 	margin 2px
 	border-width 1px 1px 1px 1px
 	border-color rgba(0, 0, 0, 0.20) rgba(0, 0, 0, 0.20) alpha(inputColor, 30%) rgba(0, 0, 0, 0.20)	
@@ -19,6 +19,9 @@ input[type=text]
 		border-width 1px 1px 2px 1px
 		border-color rgba(0, 0, 0, 0.30) rgba(0, 0, 0, 0.30) alpha(inputColor, 80%) rgba(0, 0, 0, 0.30)	
 		outline none
+		
+	&.fluid
+		width 100%
 		
 .input.group
 	&>input, &>.button
